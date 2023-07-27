@@ -31,7 +31,7 @@ jobs:
 
       - name: Replace spaces with underscores
         id: formatted_msg
-        run: echo "::set-output name=message::${{ steps.commit_msg.outputs.message//' '/_ }}"
+        run: echo "::set-output name=message::${{ steps.commit_msg.outputs.message// ' '/ '_' }}"
 
       - name: Generate Prisma Migration
         run: npx prisma migrate dev --name "${{ steps.formatted_msg.outputs.message }}"
