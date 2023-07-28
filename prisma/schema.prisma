@@ -37,7 +37,6 @@ model clinics {
   id          Int       @id @default(autoincrement())
   clinic_name String
   address     String
-  website     String?   @db.VarChar(100)
   district_id Int       @default(12)
   approved    Boolean   @default(false)
   active      Boolean   @default(false)
